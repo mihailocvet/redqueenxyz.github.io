@@ -9,6 +9,8 @@
 
 /* Reset */
 
+
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -155,7 +157,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #B50412;
 		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
@@ -179,9 +181,9 @@
 		}
 
 	h1 {
-		font-size: 2.25rem;
+		font-size: 3.25rem;
 		line-height: 1.3;
-		letter-spacing: 0.5rem;
+		letter-spacing: 0.1rem;
 	}
 
 	h2 {
@@ -1086,34 +1088,64 @@
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
-			transform: scale(1.125);
+			transform: scale(1);
+
 			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+
+			background-image: url("../../images/animation3.gif");
+			opacity: 0.10;
+
 			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
+			background-size: auto;
+			background-repeat: repeat;
 			z-index: 1;
 		}
 
-		body.is-article-visible #bg:after {
-			-moz-transform: scale(1.0825);
-			-webkit-transform: scale(1.0825);
-			-ms-transform: scale(1.0825);
-			transform: scale(1.0825);
-			-moz-filter: blur(0.2rem);
-			-webkit-filter: blur(0.2rem);
-			-ms-filter: blur(0.2rem);
-			filter: blur(0.2rem);
-		}
 
-		body.is-loading #bg:before {
-			background-color: #000000;
-		}
+				body.is-article-visible #bg:after {
+					-moz-transform: scale(1.0825);
+					-webkit-transform: scale(1.0825);
+					-ms-transform: scale(1.0825);
+					transform: scale(1.0825);
+					-moz-filter: blur(0.2rem);
+					-webkit-filter: blur(0.2rem);
+					-ms-filter: blur(0.2rem);
+					filter: blur(0.2rem);
+				}
 
-/* Wrapper */
+				body.is-loading #bg:before {
+					background-color: #B50412;
+				}
+
+
+/* GifBG */
+/*
+#gifbg {
+	-moz-transform: scale(1.0);
+	-webkit-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	transform: scale(1.0);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.1;
+
+	background-position: center;
+	background-repeat: repeat;
+
+	background-image: ;
+
+}
+
+
+ Wrapper */
 
 	#wrapper {
 		display: -moz-flex;
@@ -1169,12 +1201,14 @@
 		}
 
 /* Header */
+/* Box Structure and Skeleton */
 
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -1183,10 +1217,12 @@
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
+
 		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+
 		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
 		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
 		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
@@ -1201,16 +1237,17 @@
 			-ms-transition: opacity 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out;
 			position: relative;
-			margin-top: 3.5rem;
+			margin-top: 5.5rem;
 		}
 
 			#header > *:before {
+				/* vertical lines */
 				content: '';
 				display: block;
 				position: absolute;
 				top: calc(-3.5rem - 1px);
 				left: calc(50% - 1px);
-				width: 1px;
+				width: 0px;
 				height: calc(3.5rem + 1px);
 				background: #ffffff;
 			}
@@ -1223,23 +1260,24 @@
 				display: none;
 			}
 
-		#header .logo {
+		#header .logo  {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
+			border: solid 0px #ffffff;
 			border-radius: 100%;
 		}
 
-			#header .logo .icon:before {
-				font-size: 2rem;
+			#headerlogo img {
 			}
 
 		#header .content {
+			/* Box lines */
 			border-style: solid;
 			border-color: #ffffff;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
+			min-width: 100%;
 			max-width: 100%;
 		}
 
@@ -1264,7 +1302,7 @@
 			#header .content p {
 				text-transform: uppercase;
 				letter-spacing: 0.2rem;
-				font-size: 0.8rem;
+				font-size: 1.2rem;
 				line-height: 2;
 			}
 
@@ -1277,7 +1315,7 @@
 			list-style: none;
 			padding-left: 0;
 			border: solid 1px #ffffff;
-			border-radius: 4px;
+
 		}
 
 			#header nav ul li {
@@ -1292,9 +1330,9 @@
 				#header nav ul li a {
 					display: block;
 					min-width: 7.5rem;
-					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					height: 3.75rem;
+					line-height: 1.5rem;
+					padding: 0.25rem 1.25rem 0 1.45rem;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
 					font-size: 0.8rem;
@@ -1571,7 +1609,7 @@
 
 		#footer .copyright {
 			letter-spacing: 0.2rem;
-			font-size: 0.6rem;
+			font-size: 0.45rem;
 			opacity: 0.75;
 			margin-bottom: 0;
 			text-transform: uppercase;

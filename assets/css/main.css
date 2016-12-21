@@ -1083,7 +1083,7 @@
 			-webkit-transition-delay: 0s;
 			-ms-transition-delay: 0s;
 			transition-delay: 0s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.75), rgba(19, 21, 25, 0.35));
 			background-size: auto, 256px 256px;
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
@@ -1103,7 +1103,7 @@
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 
 			background-image: url("/images/animation3.gif");
-			opacity: 0.25;
+			opacity: 0.30;
 
 			background-position: center;
 			background-size: auto;
@@ -1207,6 +1207,12 @@
 
 		}
 
+/* Header Logo */
+	#header img {
+		padding-top: 1.5rem;
+	    height: 200px;
+	}
+
 /* Header */
 /* Box Structure and Skeleton */
 
@@ -1275,8 +1281,7 @@
 			border-radius: 100%;
 		}
 
-			#headerlogo img {
-			}
+
 
 		#header .content {
 			/* Box lines */

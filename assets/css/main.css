@@ -26,6 +26,7 @@
 
 	body {
 		line-height: 1;
+		text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
 	}
 
 	ol, ul {
@@ -148,8 +149,13 @@
 		font-weight: 600;
 	}
 
-	em, i {
+	em {
 		font-style: italic;
+	}
+
+	i {
+		font-size: 1.5em;
+		color: #B50412;
 	}
 
 	p {
@@ -163,11 +169,6 @@
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
-	}
-
-	i {
-		font-size: 1.25em;
-		color: #B50412;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -708,7 +709,7 @@
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			padding-left: 01.5em;
 		}
 
 		ul.alt {
@@ -1090,18 +1091,19 @@
 		}
 
 		#bg:after {
-			-moz-transform: scale(1);
+			/*-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
 			transform: scale(1);
+			*/
 
 			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 
-			background-image: url("../../images/animation3.gif");
-			opacity: 0.15;
+			background-image: url("/images/animation3.gif");
+			opacity: 0.25;
 
 			background-position: center;
 			background-size: auto;
@@ -1308,10 +1310,11 @@
 				text-transform: uppercase;
 				letter-spacing: 0.2rem;
 				font-size: 1.2rem;
-				line-height: 2;
+				line-height: 1;
+				font-size: 1.25em;
 			}
 
-		#header nav ul {
+		#header nav ul  {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -1332,13 +1335,15 @@
 					border-left: 0;
 				}
 
+				/* Header Buttons*/
 				#header nav ul li a {
 					display: block;
 					min-width: 7.5rem;
 					height: 3.75rem;
 					line-height: 1.5rem;
-					padding: 0.25rem 1.25rem 0 1.45rem;
+					padding: 1rem 1.25rem 0 1.45rem;
 					text-transform: uppercase;
+					font-weight: bold;
 					letter-spacing: 0.2rem;
 					font-size: 0.8rem;
 					border-bottom: 0;
@@ -1465,10 +1470,16 @@
 						}
 
 						#header nav ul li a {
+
+							padding: 0.25rem 1.25rem 0 1.45rem;
+							text-transform: uppercase;
+							letter-spacing: 0.2rem;
+							font-size: 0.8rem;
 							height: 3rem;
 							line-height: 3rem;
 							min-width: 0;
 							width: 100%;
+							border-bottom: 0;
 						}
 
 				#header nav.use-middle:after {

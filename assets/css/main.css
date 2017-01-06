@@ -1364,7 +1364,12 @@
 					border-left: 0;
 				}
 
-				/* Header Buttons*/
+				/* Header Icons */
+				#header nav ul li .icon {
+					color:red;
+				}
+
+				/* Header Buttons */
 				#header nav ul li a {
 					display: block;
 					min-width: 3.5rem;

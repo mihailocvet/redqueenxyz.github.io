@@ -1062,7 +1062,6 @@
 		-webkit-backface-visibility: hidden;
 		position: fixed;
 
-
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -1121,10 +1120,12 @@
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+			/**/
 
 
 			background-image: url("/images/animation.gif");/
 			opacity: 0.95;
+
 
 			background-position: center;
 			background-size: auto;
@@ -1234,6 +1235,7 @@
 	#header img {
 		margin: 1.5rem auto auto auto;
 	    height: 225px;
+
 	}
 
 /* Header */

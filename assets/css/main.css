@@ -1066,70 +1066,53 @@
 		left: 0;
 		width: 100%;
 		height: 100vh;
-		z-index: -100;
-
-		background-color: rgba(19, 21, 25, 1);
-
-
-		background-image:
-		linear-gradient(to top, rgba(19, 21, 25, 1), rgba(19, 21, 25, 0)),
-		url("/images/animation6.gif");
-		opacity: 0.17;
+		z-index: 1;
 	}
 
-/*
-		#bg:before, #bg:after {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+  #bg:before, #bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
+  #bg:before {
+    -moz-transition: background-color 2.5s ease-in-out;
+    -webkit-transition: background-color 2.5s ease-in-out;
+    -ms-transition: background-color 2.5s ease-in-out;
+    transition: background-color 2.5s ease-in-out;
+    -moz-transition-delay: 0.75s;
+    -webkit-transition-delay: 0.75s;
+    -ms-transition-delay: 0.75s;
+    transition-delay: 0.75s;
+    background-image:
+    linear-gradient(to bottom, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 1)), url("../../images/overlay.png");
 
-		}
+    background-size: auto, 256px 256px;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    z-index: 2;
+  }
 
+  #bg:after {
 
-		#bg:before {
-			-moz-transition: background-color 1.5s ease-in-out;
-			-webkit-transition: background-color 1.5s ease-in-out;
-			-ms-transition: background-color 1.5s ease-in-out;
-			transition: background-color 1.5s ease-in-out;
+    -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
+    -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
+    -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
+    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 
-			-moz-transition-delay: 0s;
-			-webkit-transition-delay: 0s;
-			-ms-transition-delay: 0s;
-			transition-delay: 0s;
+    background-image: url("../../images/animation.gif");
+    opacity: 0.25;
 
-			background-size: cover;
-			background-position: center, center;
-			z-index: -1;
-		}
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
+    z-index: 1;
+  }
 
-
-		#bg:after {
-			/*-moz-transform: scale(1);
-			-webkit-transform: scale(1);
-			-ms-transform: scale(1);
-			transform: scale(1);
-
-
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-
-
-
-			background-position: center, center;
-			background-size: auto;
-			background-repeat: repeat;
-
-			z-index: -100;
-
-		}
-*/
 
 				body.is-article-visible #bg:after {
 					-moz-transform: scale(1.0825);

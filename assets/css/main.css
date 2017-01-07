@@ -27,6 +27,7 @@
 	body {
 		line-height: 1;
 		text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
+
 	}
 
 	ol, ul {
@@ -186,10 +187,17 @@
 		}
 
 	h1 {
-		font-size: 5rem;
+		font-size: 4rem;
 		font-weight: 1000;
 		line-height: 1.3;
 		letter-spacing: 0.1rem;
+
+		text-shadow: 3px 5px 3px rgba(0,0,0,0.1);
+		text-shadow: 4px 6px 3px rgba(0,0,0,0.1);
+		text-shadow: 5px 7px 3px rgba(0,0,0,0.1);
+		text-shadow: 6px 8px 3px rgba(0,0,0,0.1);
+		text-shadow: 6px 8px 3px rgba(0,0,0,0.1);
+
 	}
 
 	h2 {
@@ -221,7 +229,7 @@
 	}
 
 	@media screen and (max-width: 736px) {
-
+/*
 
 		h1 {
 			font-size: 2.75rem;
@@ -232,7 +240,7 @@
 			font-size: 1.25em;
 			line-height: 1.5;
 		}
-
+*/
 
 	}
 
@@ -1111,7 +1119,7 @@
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 
     background-image: url("../../images/animation.gif");
-    opacity: 0.25;
+    opacity: 0.35;
 
     background-position: center;
     background-size: auto;
@@ -1301,8 +1309,8 @@
 			border-color: #ffffff;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
-			min-width: 150%;
-			max-width: 175%;
+			min-width: 122.5%;
+			max-width: 150%;
 		}
 
 			#header .content .inner {
@@ -1314,7 +1322,10 @@
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				padding: 3rem 2rem;
+
+				padding: 3rem 13rem;
+				margin-left: 1px;
+
 				max-height: 40rem;
 				overflow: hidden;
 			}

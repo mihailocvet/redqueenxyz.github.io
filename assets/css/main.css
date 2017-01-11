@@ -205,14 +205,15 @@
 	h3 {
 	    text-transform: uppercase;
 	    font-weight: 500;
-		line-height: 1.25;
-		font-size: 2.25rem;
+		line-height: 1.2;
+		font-size: 1.5rem;
 	}
 
 	h4 {
     	color: white;
 		font-weight: 300;
-		font-size: 2.15rem;
+		line-height: 1;
+		font-size: 1.25rem;
 	}
 
 	h5 {
@@ -235,11 +236,11 @@
 	}
 
 	h2 {
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 	}
 
 	h3 {
-		font-size: 0.825rem;
+		font-size: 1.2rem;
 	}
 
 	h4 {
@@ -1130,7 +1131,7 @@
     transition-delay: 0.75s;
 
     background-image:
-    linear-gradient(to bottom, rgba(19, 21, 25, 0.75), rgba(19, 21, 25, 1));
+    linear-gradient(to bottom, rgba(19, 21, 25, 0.65), rgba(19, 21, 25, 1));
 
     background-size: auto;
     background-position: center;
@@ -1146,7 +1147,7 @@
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 
     background-image: url("../../images/animation.gif");
-    opacity: 0.70;
+    opacity: 0.5;
 
     background-position: center;
     background-size: auto;
@@ -1216,9 +1217,10 @@
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		position: relative;
+
 		min-height: 100vh;
 		width: 100%;
-		padding: 4rem 2rem;
+		padding: 1rem 2rem;
 		z-index: 3;
 	}
 
@@ -1257,7 +1259,7 @@
     top: 2px;
     left: -2px;
     display: block;
-	  height: 175px;
+	height: 200px;
 	}
 
 /* Header */
@@ -1288,8 +1290,10 @@
 		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
 		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
 		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
+
 		max-width: 100%;
 		text-align: center;
+		margin-top: -2rem;
 	}
 
 		#header > * {
@@ -1298,7 +1302,7 @@
 			-ms-transition: opacity 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out;
 			position: relative;
-			margin-top: 5.5rem;
+			margin-top: 2.5rem;
 		}
 
 			#header > *:before {
@@ -1306,10 +1310,10 @@
 				content: '';
 				display: block;
 				position: absolute;
-				top: calc(-5.5rem - 1px);
+				top: calc(-2.5rem - 1px);
 				left: calc(50% - 1px);
 				width: 1px;
-				height: calc(5.5rem + 1px);
+				height: calc(2.5rem + 1px);
 				background: #ffffff;
 			}
 
@@ -1323,7 +1327,7 @@
 
 		#header .logo  {
 			width: 5.5rem;
-			height: 5.5rem;
+			height: .5rem;
 			line-height: 5.5rem;
 			border: solid 0px #ffffff;
 			border-radius: 100%;
@@ -1357,6 +1361,15 @@
 				max-height: 40rem;
 				overflow: hidden;
 			}
+
+			#header .content .inner img{
+				/* Logo Text */
+				margin: -1.5rem auto 1rem auto;
+				width: 300px; /* you can use % */
+ 				height: auto;
+
+				position: center center;
+				}
 
 				#header .content .inner > :last-child {
 					margin-bottom: 0;
@@ -1475,7 +1488,14 @@
 				display: none;
 			}
 
+			#header .content .inner img{
+				/* Logo Text */
+				width: 275px;
+
+				}
+
 		}
+
 
 		@media screen and (max-width: 736px) {
 
@@ -1506,7 +1526,14 @@
 				line-height: 1.875;
 			}
 
+			#header .content .inner img{
+				/* Logo Text */
+				width: 250px;
+
+				}
+
 		}
+
 
 		@media screen and (max-width: 480px) {
 
@@ -1552,6 +1579,12 @@
 				#header nav.use-middle:after {
 					display: none;
 				}
+
+				#header .content .inner img{
+					/* Logo Text */
+					width: 200px;
+
+					}
 
 		}
 

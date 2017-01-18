@@ -20,7 +20,7 @@
 	<meta property="og:title" content="Red Queen" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://redqueen.xyz" />
-	<meta property="og:image" content="http://redqueen.xyz/logo.png" />
+	<meta property="og:image" content="images/logo.png" />
 	<meta property="og:description" content="A Data Company">
 
 	<meta charset="utf-8" />
@@ -57,6 +57,9 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
+
+
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -69,11 +72,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<br>
 					<h4>
 					A
-				</h4>
-					<h3>
+					</h4>
+						<h3>
+							<span id="typed">
 							<div id="typed-strings">
 								<p>Data</p>
 								<p>Machine Intelligence</p>
+								<p>Data Lab</p>
 								<p>Data Analysis</p>
 								<p>Market Research</p>
 								<p>Predictive Analytics</p>
@@ -84,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<p>Blockchain</p>
 								<p>Data Product</p>
 							</div>
-							<span id="typed"></span>
+							</span>
 						</h3>
 					<h4>
 						Company.
@@ -98,7 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<a href="#about">
 							<div class="icon fa-question"></div> About </a>
 					</li>
-<!--
+					<!--
 					<li>
 						<a href="#intro">
 							<div class="icon fa-briefcase"></div> Plan </a>
@@ -114,7 +119,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 -->
 					<li>
 						<a href="#contact">
-							<div class="icon fa-paper-plane"></div> meet </a>
+							<div class="icon fa-paper-plane"></div>
+							meet </a>
 					</li>
 
 				</ul>
@@ -178,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				- Red Queen (<i>Lewis Carroll</i>), Alice in Wonderland
 			</h6>
 				<span class="image main">
-			<img src="http://www.oldsaybrookct.org/pages/oldsaybrookct_library/0560EF97-000F8513.0/Alice%20&%20Queen.jpg"></img>
+			<img src="images/about/Alice.jpg"></img>
 			</span>
 
 				<p>
@@ -515,6 +521,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- Active Scripts -->
 	<!-- Typed.js -->
 	<script>
+	$(window).load(function() {
+	  // When the page has loaded
+	  $("typed-strings").fadeIn(100);
+	});
+
 		$(function() {
 			$("#typed").typed({
 				stringsElement: $('#typed-strings'),

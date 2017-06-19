@@ -1,11 +1,11 @@
+container = document.getElementById( 'canvas' );
+document.body.appendChild( container );
+
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 40 );
 camera.position.z = 12;
 const SPEED = 0.001;
 
-
-container = document.getElementById( 'canvas' );
-document.body.appendChild( container );
 
 let renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );

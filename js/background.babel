@@ -1,0 +1,69 @@
+let scene = new THREE.Scene();
+let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 40 );
+camera.position.z = 12;
+const SPEED = 0.001;
+
+
+container = document.getElementById( 'canvas' );
+document.body.appendChild( container );
+
+let renderer = new THREE.WebGLRenderer( { antialias: true } );
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setClearColor( 0x000000, 1 );
+container.appendChild( renderer.domElement );
+
+
+let lights = [];
+lights[ 0 ] = new THREE.PointLight( 0xd80000, .25, 0, 100 );
+lights[ 1 ] = new THREE.PointLight( 0xff0000, .55, 0, 100 );
+lights[ 2 ] = new THREE.PointLight( 0xffffff, .85, 0, 100 );
+
+lights[ 0 ].position.set( 0, 0, 0 );
+lights[ 1 ].position.set( 0, 0, 300 );
+lights[ 2 ].position.set( - 100, - 200, - 100 );
+
+scene.add( lights[ 0 ] );
+scene.add( lights[ 1 ] );
+scene.add( lights[ 2 ] );
+
+var mesh = new THREE.Object3D();
+THREE.ImageUtils.crossOrigin = '';
+
+var loader = new THREE.TextureLoader();
+loader.crossOrigin = '';
+var texture = loader.load( 'https://upload.wikimedia.org/wikipedia/commons/5/5b/10x10_checkered_board.svg');
+texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+texture.offset.set( 0, 0 );
+texture.repeat.set( 25, 25 );
+console.log(texture)
+
+
+mesh.add( new THREE.Mesh(
+  new THREE.TorusGeometry( 10, 7, 60, 100 ),
+  new THREE.MeshPhongMaterial( {
+    color: 0xFFFFFF,
+    map: texture,
+    side: THREE.DoubleSide,
+  })
+))
+
+mesh.rotation.x = Math.PI / 2;
+scene.add( mesh );
+
+function rotateTorus() {
+  mesh.rotation.z -= SPEED * -1.35;
+}
+
+var render = function () {
+  requestAnimationFrame( render );
+  rotateTorus();
+  renderer.render( scene, camera );
+};
+
+window.addEventListener( 'resize', function () {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+}, false );
+render();
